@@ -20,8 +20,7 @@ class PlaceInput extends Component {
 
         this.props.onPlaceAdded(this.state.placeName)
     }
-
-      
+    
     render() {
         return (
             <View style={styles.inputContainer}>
