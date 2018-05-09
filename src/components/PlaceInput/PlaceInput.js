@@ -5,7 +5,7 @@ import {StyleSheet, Text, View, TextInput, Button } from 'react-native';
 class PlaceInput extends Component {
     state = {
         placeName: ""
-      };
+    };
     
     placeNameChangedHandler = (val) => {
         this.setState({
