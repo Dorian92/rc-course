@@ -4,7 +4,8 @@ ADDED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest
 INJECTED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml:1:1-26:12
 INJECTED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml:1:1-26:12
 INJECTED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml:1:1-26:12
-MERGED from [com.facebook.react:react-native:0.55.3] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.3.aar\154abf52f7832035f0ea77d50f26790a\AndroidManifest.xml:2:1-15:12
+MERGED from [:react-native-vector-icons] C:\Users\Dorian\Desktop\rncourse\node_modules\react-native-vector-icons\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\534212b8ac90bd80c4b51f860b54458a\AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\247516ce57c6b541f693d90906747c29\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\support-v4-23.0.1.aar\c5b4f5f076d3672253da22409dcbce0a\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\textlayoutbuilder-1.0.0.aar\f2bbdb2457ea94a1ba44476e90363f18\AndroidManifest.xml:10:1-18:12
@@ -39,14 +40,14 @@ ADDED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest
 		ADDED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml:4:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml:5:5-77
-MERGED from [com.facebook.react:react-native:0.55.3] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.3.aar\154abf52f7832035f0ea77d50f26790a\AndroidManifest.xml:11:5-78
-MERGED from [com.facebook.react:react-native:0.55.3] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.3.aar\154abf52f7832035f0ea77d50f26790a\AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\534212b8ac90bd80c4b51f860b54458a\AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\534212b8ac90bd80c4b51f860b54458a\AndroidManifest.xml:11:5-78
 	android:name
 		ADDED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml:5:22-75
 application
 ADDED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml:7:5-24:19
-MERGED from [com.facebook.react:react-native:0.55.3] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.3.aar\154abf52f7832035f0ea77d50f26790a\AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.react:react-native:0.55.3] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.3.aar\154abf52f7832035f0ea77d50f26790a\AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\534212b8ac90bd80c4b51f860b54458a\AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\534212b8ac90bd80c4b51f860b54458a\AndroidManifest.xml:13:5-20
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\247516ce57c6b541f693d90906747c29\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\247516ce57c6b541f693d90906747c29\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\support-v4-23.0.1.aar\c5b4f5f076d3672253da22409dcbce0a\AndroidManifest.xml:22:5-20
@@ -93,8 +94,10 @@ uses-sdk
 INJECTED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Dorian\Desktop\rncourse\android\app\src\main\AndroidManifest.xml
-MERGED from [com.facebook.react:react-native:0.55.3] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.3.aar\154abf52f7832035f0ea77d50f26790a\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.55.3] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.3.aar\154abf52f7832035f0ea77d50f26790a\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] C:\Users\Dorian\Desktop\rncourse\node_modules\react-native-vector-icons\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] C:\Users\Dorian\Desktop\rncourse\node_modules\react-native-vector-icons\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\534212b8ac90bd80c4b51f860b54458a\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\534212b8ac90bd80c4b51f860b54458a\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\247516ce57c6b541f693d90906747c29\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.0.1.aar\247516ce57c6b541f693d90906747c29\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Dorian\.gradle\caches\transforms-1\files-1.1\support-v4-23.0.1.aar\c5b4f5f076d3672253da22409dcbce0a\AndroidManifest.xml:20:5-43
