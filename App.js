@@ -15,11 +15,11 @@ class App extends Component {
 
   placeDeletedHandler = () => {
       this.props.onDeletePlace();
+      console.log('deleting');
   };
 
   modalClosedHandler = () => {
       this.props.onDeselectPlace();
-      console.log('deleting')
   };
 
   placeSelectedHandler = key => {
