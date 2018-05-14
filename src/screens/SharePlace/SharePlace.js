@@ -17,25 +17,27 @@ class SharePlaceScreen extends Component {
                 this.props.navigator.toggleDrawer({
                     side: "left"
                 });
-            }
-        }
+            } 
+        }  
     }
+
     placeAddedHandler = placeName => {
         this.props.onAddPlace(placeName);
     }
-    render() {
+
+    render () {
         return (
             <View>
                 <PlaceInput onPlaceAdded={this.placeAddedHandler}/>
             </View>
-        )
+        );
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onAddPlace: (place) => dispatch(addPlace(place))
+        onAddPlace: (placeName) => dispatch(addPlace(placeName))
     };
-}
+};
 
-export default connect(null,mapDispatchToProps)(SharePlaceScreen);
+export default connect(null, mapDispatchToProps)(SharePlaceScreen);
