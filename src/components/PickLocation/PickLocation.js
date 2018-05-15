@@ -11,7 +11,7 @@ class PickLocation extends Component {
                 <Text>Map</Text>
             </View>
             <View style={styles.button}>
-                <Button title="Locate Me" onPress={() => alert("clicked")} />
+                <Button title="Locate Me" onPress={() => alert('Pick Location')} />
             </View>
         </View>
         );
