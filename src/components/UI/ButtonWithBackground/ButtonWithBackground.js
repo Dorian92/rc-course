@@ -10,7 +10,7 @@ import { TouchableOpacity,
 const buttonWidthBackground = props => {
     const content = (
             <View style={[styles.button, {backgroundColor: props.color},props.disabled ? styles.disabled : null]}>
-                <Text>{props.children}</Text>
+                <Text style={props.disabled ? styles.disabledText : null}>{props.children}</Text>
             </View>
     )
     if (props.disabled) {
