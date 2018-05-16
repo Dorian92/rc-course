@@ -18,7 +18,7 @@ class FindPlaceScreen extends Component {
     state = {
       placesLoaded: false,
       removeAnim: new Animated.Value(1),
-      addAnim: new Animated.Value(0)
+      placesAnim: new Animated.Value(0)
     }
 
   constructor(props) {
@@ -50,7 +50,7 @@ class FindPlaceScreen extends Component {
   };
 
   placesLoadedHandler = () => {
-    Animated.timing(this.state.addAnim, {
+    Animated.timing(this.state.placesAnim, {
       toValue: 1,
       duration: 1000,
       useNativeDriver: true
@@ -97,10 +97,10 @@ class FindPlaceScreen extends Component {
       content = (
         <Animated.View
         style={{
-          opacity: this.state.addAnim,
+          opacity: this.state.placesAnim,
           transform: [
             {
-              scale: this.state.addAnim.interpolate({
+              scale: this.state.placesAnim.interpolate({
                 inputRange: [0, 1],
                 outputRange: [5, 1]
               })
