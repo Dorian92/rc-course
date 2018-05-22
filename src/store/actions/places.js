@@ -93,7 +93,7 @@ export const deletePlace = (key) => {
             .catch(() => {
                 alert("No valid token found!");
             })
-            .then(then => {
+            .then(token => {
                 dispatch(removePlace(key));
                 return fetch("https://awesome-places-1526557212424.firebaseio.com/places/" + key + ".json?auth=" + token,{
                     method: "DELETE"

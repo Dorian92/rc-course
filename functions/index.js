@@ -5,8 +5,8 @@ const fs = require('fs');
 const UUID = require('uuid-v4');
 
 const gcconfig = {
-   projectId: 'rn-course-1526556269152',
-   keyFilename: 'rn-course.json'
+   projectId: 'awesome-places-1526557212424',
+   keyFilename: 'awesome-places.json'
 }
 
 const gcs = require('@google-cloud/storage')(gcconfig);
