@@ -43,13 +43,11 @@ export const tryAuth = (authData, authMode) => {
 export const authSignup = (authData) => {
     return dispatch => {
         dispatch(uiStartLoading());
-
     };
 };
 
 export const authSignin = authData => {
-    return dispatch => {
-        
+    return dispatch => {   
         fetch("https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyCO_QYDaVlh6s4UlB9_ur1Zp4ctKoF2l8Y",{
             method: "POST",
             body: JSON.stringify({
