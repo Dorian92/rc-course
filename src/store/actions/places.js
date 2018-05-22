@@ -10,11 +10,6 @@ export const addPlace = (placeName, location, image) => {
                 image: image.base64
             })
         })
-        .catch(err => {
-            console.log(err);
-            alert("Something went wrong, plase try again!")
-            dispatch(uiStopLoading());
-        })
         .then(res => res.json())
         .then(parsedRes => {
             const placeData = {
@@ -36,16 +31,17 @@ export const addPlace = (placeName, location, image) => {
             console.log(parsedRes);
             dispatch(uiStopLoading());
         })
+        .catch(err => {
+            console.log(err);
+            alert("Something went wrong, plase try again!")
+            dispatch(uiStopLoading());
+        })
     }
 };
 
 export const getPlaces = () => {
     return dispatch => {
         fetch("https://awesome-places-1526557212424.firebaseio.com/places.json")
-    .catch(err => {
-        alert("Something went wrong, sorry");
-        console.log(err);
-    })
     .then(res => res.json())
     .then(parsedRes => {
         const places = [];
@@ -59,7 +55,11 @@ export const getPlaces = () => {
             });
         }
         dispatch(setPlaces(places));
-    });
+    })
+    .catch(err => {
+        alert("Something went wrong, sorry");
+        console.log(err);
+    })
     }
 };
 
@@ -76,13 +76,13 @@ export const deletePlace = (key) => {
         fetch("https://awesome-places-1526557212424.firebaseio.com/places/" + key + ".json",{
             method: "DELETE"
         })
-        .catch(err => {
-            alert("Something went wrong, sorry ;/");
-            console.log(err)
-        })
         .then(res => res.json())
         .then(parsedRes => {
             console.log('Done!');
+        })
+        .catch(err => {
+            alert("Something went wrong, sorry ;/");
+            console.log(err)
         })
     };
 };
