@@ -35,11 +35,21 @@ export const tryAuth = (authData, authMode) => {
             if(!parsedRes.idToken){
                 alert("Authentication faild, please try again");
             } else {
-                dispatch(authStoreToken(parsedRes.idToken))
+                dispatch(authStoreToken(parsedRes.idToken, parsedRes.expiresIn))
                 startMainTabs();
             }
         });
     };
+};
+
+export const authStoreToken = (token, expiresIn) => {
+    return dispatch => {
+        dispatch(authSetToken(token));
+        const now = new Date();
+        const expireDate = now.getTime() + 20 * 1000;
+        AsyncStorage.setItem("ap:auth:token", token);
+        AsyncStorage.setItem("ap:auth:expiryDate", expireDate.toString());
+    }
 };
 
 export const authSignup = (authData) => {
@@ -78,13 +88,6 @@ export const authSignin = authData => {
     };
 };
 
-export const authStoreToken = token => {
-    return dispatch => {
-        dispatch(authSetToken(token));
-        AsyncStorage.setItem("ap:auth:token", token);
-    }
-};
-
 export const authSetToken = token => {
     return {
         type: AUTH_SET_TOKEN,
@@ -97,16 +100,29 @@ export const authGetToken = () => {
         const promise = new Promise((resolve, reject) => {
             const token = getState().auth.token;
             if (!token) {
+                let fetchedToken;
                 AsyncStorage.getItem("ap:auth:token")
                     .catch(err => reject())
                     .then(tokenFromStorage => {
+                        fetchedToken = tokenFromStorage;
                         if (!tokenFromStorage) {
                             reject();
                             return;
                         }
-                        dispatch(authSetToken(tokenFromStorage));
-                        resolve(tokenFromStorage);
-                    });
+                        return AsyncStorage.getItem("ap:auth:expiryDate");
+
+                    })
+                    .then(expiryDate => {
+                        const parsedExpiryDate = new Date(parseInt(expiryDate));
+                        const now = new Date();
+                        if (parsedExpiryDate > now) {
+                            dispatch(authSetToken(fetchedToken));
+                            resolve(fetchedToken);
+                        } else {
+                            reject();
+                        }
+                    })
+                    .catch(err => reject());
             } else {
                 resolve(token);
             }
