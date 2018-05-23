@@ -46,7 +46,7 @@ export const authStoreToken = (token, expiresIn) => {
     return dispatch => {
         dispatch(authSetToken(token));
         const now = new Date();
-        const expireDate = now.getTime() + 20 * 1000;
+        const expireDate = now.getTime() + expiresIn * 1000;
         AsyncStorage.setItem("ap:auth:token", token);
         AsyncStorage.setItem("ap:auth:expiryDate", expireDate.toString());
     }
@@ -127,6 +127,9 @@ export const authGetToken = () => {
                 resolve(token);
             }
         });
+        promise.catch(err => {
+            dispatch(authClearStorage());
+        })
         return promise;
     };
 };
@@ -140,3 +143,10 @@ export const authAutoSignIn = () => {
             .catch(err => console.log("Failed to fetch token!"));
     }
 };
+
+export const authClearStorage = () => {
+    return dispatch => {
+        AsyncStorage.removeItem("ap:auth:token");
+        AsyncStorage.removeItem("ap:auth:expiryDate");
+    }
+}
