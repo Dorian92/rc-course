@@ -41,9 +41,23 @@ export const addPlace = (placeName, location, image) => {
         })
         .catch(err => {
             console.log(err);
+            alert("Something went wrong, please try again!");
             dispatch(uiStopLoading());
         })
-        .then(res => res.json())
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                throw(new Error());
+            }
+        })
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                throw(new Error());
+            }
+        })
         .then(parsedRes => {
             console.log(parsedRes);
             dispatch(uiStopLoading());
